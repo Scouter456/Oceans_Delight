@@ -1,0 +1,32 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "farmersdelight"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "container": {
+          "item": "minecraft:bowl"
+        },
+        "cookingtime": 200,
+        "experience": 0.35,
+        "ingredients": [
+          {
+            "item": "oceansdelight:cut_tentacles"
+          },
+          {
+            "tag": "forge:dough"
+          }
+        ],
+        "result": {
+          "item": "oceansdelight:squid_rings"
+        }
+      }
+    }
+  ]
+}

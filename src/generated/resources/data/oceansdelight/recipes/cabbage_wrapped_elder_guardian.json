@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "forge:salad_ingredients/cabbage"
+    },
+    {
+      "tag": "forge:crops/onion"
+    },
+    {
+      "tag": "forge:crops/tomato"
+    },
+    {
+      "item": "oceansdelight:cooked_elder_guardian_slice"
+    }
+  ],
+  "result": {
+    "item": "oceansdelight:cabbage_wrapped_elder_guardian"
+  }
+}

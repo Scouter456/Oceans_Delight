@@ -1,0 +1,22 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "farmersdelight"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:campfire_cooking",
+        "cookingtime": 600,
+        "experience": 0.45,
+        "ingredient": {
+          "item": "oceansdelight:guardian_tail"
+        },
+        "result": "oceansdelight:cooked_guardian_tail"
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "farmersdelight"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:campfire_cooking",
+        "cookingtime": 600,
+        "experience": 0.65,
+        "ingredient": {
+          "item": "oceansdelight:elder_guardian_slice"
+        },
+        "result": "oceansdelight:cooked_elder_guardian_slice"
+      }
+    }
+  ]
+}

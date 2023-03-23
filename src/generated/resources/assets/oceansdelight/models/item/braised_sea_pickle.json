@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "oceansdelight:item/braised_sea_pickle"
+  }
+}
