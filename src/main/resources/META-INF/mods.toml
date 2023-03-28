@@ -17,19 +17,19 @@ This is a mod that adds food based on the creatures in the ocean
 [[dependencies.oceansdelight]] #optional
     modId="forge" #mandatory
     mandatory=true #mandatory
-    versionRange="[43,)" #mandatory
+    versionRange="[40,)" #mandatory
     ordering="NONE"
     side="BOTH"
 [[dependencies.oceansdelight]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.19.2,1.20)"
+    versionRange="[1.18.2,1.19)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.farmersdelight]]
     modId="farmersdelight"
     mandatory=true
-    versionRange="[1.19-1.2.0)"
+    versionRange="[1.18.2-1.2.0)"
     ordering="NONE"
     side="BOTH"
 
