@@ -64,30 +64,6 @@ public class BlockstateGenerator extends BlockStateProvider {
         return ForgeRegistries.BLOCKS.getKey(block);
     }
 
-    public void tomatoBlock(Block block, ResourceLocation texture, String renderType) {
-        tomatoBlock(block, key(block).toString(), texture, renderType);
-    }
-
-    public void tomatoBlock(Block block, String baseName, ResourceLocation texture, String  renderType) {
-        ModelFile age1 = models().cross(baseName + "_stage0", new ResourceLocation(texture.toString() + "_stage0")).renderType(renderType);
-        ModelFile age2 = models().cross(baseName + "_stage1",  new ResourceLocation(texture.toString() + "_stage1")).renderType(renderType);
-        ModelFile age3 = models().cross(baseName + "_stage2",  new ResourceLocation(texture.toString() + "_stage2")).renderType(renderType);
-        ModelFile age4 = models().cross(baseName + "_stage3",  new ResourceLocation(texture.toString() + "_stage3")).renderType(renderType);
-
-        tomatoBlock(block, age1, age2, age3, age4);
-    }
-    private void tomatoBlock(Block block, ModelFile age1, ModelFile age2, ModelFile age3, ModelFile age4){
-        getVariantBuilder(block).forAllStatesExcept((state -> {
-            switch ( state.getValue(BlockStateProperties.AGE_3)){
-                default: return ConfiguredModel.builder().modelFile(age1).build();
-                case 1:return ConfiguredModel.builder().modelFile(age2).build();
-                case 2:return ConfiguredModel.builder().modelFile(age3).build();
-                case 3:return ConfiguredModel.builder().modelFile(age4).build();
-            }
-        }));
-    }
-
-
 
     @Override
     public String getName() {
