@@ -1,0 +1,13 @@
+{
+  "type": "farmersdelight:add_item",
+  "conditions": [
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "type": "minecraft:guardian"
+      }
+    }
+  ],
+  "item": "oceansdelight:guardian"
+}

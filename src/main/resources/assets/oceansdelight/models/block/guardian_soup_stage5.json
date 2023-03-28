@@ -2,8 +2,10 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [80, 80],
 	"textures": {
-		"1": "Minecraft Modding:guardian_soup",
-		"particle": "Minecraft Modding:guardian_soup"
+		"1": "oceansdelight:block/guardian_soup",
+		"particle": "oceansdelight:block/guardian_soup",
+		"tray_side": "farmersdelight:block/tray_bottom",
+		"tray_top": "farmersdelight:block/tray_pie_leftover"
 	},
 	"elements": [
 		{
@@ -11,14 +13,13 @@
 			"from": [1, 0, 1],
 			"to": [15, 2, 15],
 			"rotation": {"angle": 0, "axis": "y", "origin": [-8, 0, -8]},
-			"color": 3,
 			"faces": {
-				"north": {"uv": [0.8, 4.4, 12, 5.2], "texture": "#missing"},
-				"east": {"uv": [0.8, 4.4, 12, 5.2], "texture": "#missing"},
-				"south": {"uv": [0.8, 4.4, 12, 5.2], "texture": "#missing"},
-				"west": {"uv": [0.8, 4.4, 12, 5.2], "texture": "#missing"},
-				"up": {"uv": [0.8, 0.4, 12, 6], "texture": "#missing"},
-				"down": {"uv": [0.8, 0.4, 12, 6], "texture": "#missing", "cullface": "down"}
+				"north": {"uv": [1, 11, 15, 13], "texture": "#tray_side"},
+				"east": {"uv": [1, 11, 15, 13], "texture": "#tray_side"},
+				"south": {"uv": [1, 11, 15, 13], "texture": "#tray_side"},
+				"west": {"uv": [1, 11, 15, 13], "texture": "#tray_side"},
+				"up": {"uv": [1, 1, 15, 15], "texture": "#tray_top"},
+				"down": {"uv": [1, 1, 15, 15], "texture": "#tray_side", "cullface": "down"}
 			}
 		},
 		{
@@ -33,20 +34,6 @@
 				"west": {"uv": [5.6, 3.2, 6, 5.6], "texture": "#1"},
 				"up": {"uv": [5.6, 3.2, 3.2, 2.8], "texture": "#1"},
 				"down": {"uv": [8, 2.8, 5.6, 3.2], "texture": "#1"}
-			}
-		},
-		{
-			"name": "body",
-			"from": [-3, 15, 5],
-			"to": [9, 17, 17],
-			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8.79289, 7.625]},
-			"faces": {
-				"north": {"uv": [5.6, 10.4, 8, 10.8], "texture": "#1"},
-				"east": {"uv": [3.2, 10.4, 5.6, 10.8], "texture": "#1"},
-				"south": {"uv": [10.4, 10.4, 12.8, 10.8], "texture": "#1"},
-				"west": {"uv": [8, 10.4, 10.4, 10.8], "texture": "#1"},
-				"up": {"uv": [8, 10.4, 5.6, 8], "texture": "#1"},
-				"down": {"uv": [10.4, 8, 8, 10.4], "texture": "#1"}
 			}
 		},
 		{
@@ -127,10 +114,10 @@
 			"faces": {
 				"north": {"uv": [0.4, 1.4, 1.2, 1.8], "texture": "#1"},
 				"east": {"uv": [0, 1.4, 0.4, 1.8], "texture": "#1"},
-				"south": {"uv": [1.6, 1.4, 2.4, 1.8], "texture": "#1"},
+				"south": {"uv": [0.8, 1.4, 1.6, 1.8], "texture": "#1"},
 				"west": {"uv": [1.2, 1.4, 1.6, 1.8], "texture": "#1"},
 				"up": {"uv": [1.2, 1.4, 0.4, 1], "texture": "#1"},
-				"down": {"uv": [2, 1, 1.2, 1.4], "texture": "#1"}
+				"down": {"uv": [1.6, 1, 0.8, 1.4], "texture": "#1"}
 			}
 		},
 		{
@@ -141,10 +128,10 @@
 			"faces": {
 				"north": {"uv": [0.4, 0.4, 1.2, 0.8], "texture": "#1"},
 				"east": {"uv": [0, 0.4, 0.4, 0.8], "texture": "#1"},
-				"south": {"uv": [1.6, 0.4, 2.4, 0.8], "texture": "#1"},
+				"south": {"uv": [0.8, 0.4, 1.6, 0.8], "texture": "#1"},
 				"west": {"uv": [1.2, 0.4, 1.6, 0.8], "texture": "#1"},
 				"up": {"uv": [1.2, 0.4, 0.4, 0], "texture": "#1"},
-				"down": {"uv": [2, 0, 1.2, 0.4], "texture": "#1"}
+				"down": {"uv": [1.2, 0, 0.4, 0.4], "texture": "#1"}
 			}
 		},
 		{
@@ -169,10 +156,10 @@
 			"faces": {
 				"north": {"uv": [0.4, 0.4, 1.2, 0.8], "texture": "#1"},
 				"east": {"uv": [0, 0.4, 0.4, 0.8], "texture": "#1"},
-				"south": {"uv": [1.6, 0.4, 2.4, 0.8], "texture": "#1"},
+				"south": {"uv": [0.8, 0.4, 1.6, 0.8], "texture": "#1"},
 				"west": {"uv": [1.2, 0.4, 1.6, 0.8], "texture": "#1"},
 				"up": {"uv": [1.2, 0.4, 0.4, 0], "texture": "#1"},
-				"down": {"uv": [2, 0, 1.2, 0.4], "texture": "#1"}
+				"down": {"uv": [1.2, 0, 0.4, 0.4], "texture": "#1"}
 			}
 		},
 		{
@@ -183,10 +170,10 @@
 			"faces": {
 				"north": {"uv": [0.4, 1.2, 1.2, 1.6], "texture": "#1"},
 				"east": {"uv": [0, 1.2, 0.4, 1.6], "texture": "#1"},
-				"south": {"uv": [1.6, 1.2, 2.4, 1.6], "texture": "#1"},
+				"south": {"uv": [0.8, 1.2, 1.6, 1.6], "texture": "#1"},
 				"west": {"uv": [1.2, 1.2, 1.6, 1.6], "texture": "#1"},
 				"up": {"uv": [1.2, 1.2, 0.4, 0.8], "texture": "#1"},
-				"down": {"uv": [2, 0.8, 1.2, 1.2], "texture": "#1"}
+				"down": {"uv": [1.6, 0.8, 0.8, 1.2], "texture": "#1"}
 			}
 		},
 		{
@@ -419,13 +406,13 @@
 				3,
 				4,
 				5,
-				6,
 				{
 					"name": "spine4_rotation",
 					"origin": [7, 17, -7],
 					"color": 0,
-					"children": [7]
+					"children": [6]
 				},
+				7,
 				8,
 				9,
 				10,
@@ -434,8 +421,7 @@
 				13,
 				14,
 				15,
-				16,
-				17
+				16
 			]
 		}
 	]

@@ -10,12 +10,11 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import vectorwing.farmersdelight.common.block.FeastBlock;
 
 @Mod.EventBusSubscriber(modid = OceansDelight.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ODBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, OceansDelight.MODID);
     public static final RegistryObject<Block> GUARDIAN_SOUP = BLOCKS.register("guardian_soup", () -> new GuardianSoupBlock(BlockBehaviour.Properties.of(Material.METAL)
-            .strength(0.5F, 6.0F)
-            .sound(SoundType.LANTERN), ODItems.BOWL_OF_GUARDIAN_SOUP, false));
+            .strength(0.5F, 6.0F).noOcclusion()
+            .sound(SoundType.LANTERN), ODItems.BOWL_OF_GUARDIAN_SOUP, true));
 }
