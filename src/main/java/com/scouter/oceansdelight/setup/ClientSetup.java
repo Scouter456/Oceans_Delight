@@ -1,17 +1,30 @@
 package com.scouter.oceansdelight.setup;
 
+import com.scouter.oceansdelight.blocks.ODBlocks;
+import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.minecraft.client.renderer.RenderType;
 
-import com.scouter.oceansdelight.OceansDelight;
-import com.scouter.oceansdelight.client.renderer.RenderLayerRegistration;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-
-@Mod.EventBusSubscriber(modid = OceansDelight.MODID, value = Dist.CLIENT,bus = Mod.EventBusSubscriber.Bus.MOD)
-public class ClientSetup {
-    public static void init(FMLClientSetupEvent event){
-        RenderLayerRegistration.init();
+public class ClientSetup implements ClientModInitializer {
+    @Override
+    public void onInitializeClient() {
+        RenderLayerRegistration();
     }
 
-}
 
+    public static void RenderLayerRegistration(){
+        RenderType cutoutMipped = RenderType.cutoutMipped();
+        RenderType cutout = RenderType.cutout();
+        RenderType translucent = RenderType.translucent();
+        RenderType translucentnocrumb = RenderType.translucentNoCrumbling();
+        RenderType solid = RenderType.solid();
+
+        BlockRenderLayerMap.INSTANCE.putBlock(ODBlocks.GUARDIAN_SOUP, cutout);
+
+
+
+    }
+    public static void init(){
+
+    }
+}

@@ -1,10 +1,9 @@
 package com.scouter.oceansdelight.items;
 
-import com.mojang.blaze3d.shaders.Effect;
+import com.nhoryzon.mc.farmersdelight.registry.EffectsRegistry;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
-import vectorwing.farmersdelight.common.registry.ModEffects;
 
 public class ODFoods {
 
@@ -15,7 +14,7 @@ public class ODFoods {
     public static final FoodProperties TENTACLES = new FoodProperties.Builder()
             .nutrition(3)
             .saturationMod(0.3F)
-            .effect(() -> new MobEffectInstance(MobEffects.BLINDNESS, BRIEF_DURATION, 0), 1.0F)
+            .effect( new MobEffectInstance(MobEffects.BLINDNESS, BRIEF_DURATION, 0), 1.0F)
             .build();
 
     public static final FoodProperties CUT_TENTACLES = new FoodProperties.Builder()
@@ -51,7 +50,7 @@ public class ODFoods {
     public static final FoodProperties BOWL_OF_GUARDIAN_SOUP = new FoodProperties.Builder()
             .nutrition(15)
             .saturationMod(0.8F)
-            .effect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), MEDIUM_DURATION, 0), 1.0F)
+            .effect( new MobEffectInstance(EffectsRegistry.COMFORT.get(), MEDIUM_DURATION, 0), 1.0F)
             .build();
     public static final FoodProperties ELDER_GUARDIAN_SLAB = new FoodProperties.Builder()
             .nutrition(9)
@@ -61,7 +60,7 @@ public class ODFoods {
     public static final FoodProperties ELDER_GUARDIAN_SLICE = new FoodProperties.Builder()
             .nutrition(1)
             .saturationMod(0.1F)
-            .effect(() -> new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 3000, 0), 0.5F)
+            .effect(new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 3000, 0), 0.5F)
             .build();
 
     public static final FoodProperties COOKED_ELDER_GUARDIAN_SLICE = new FoodProperties.Builder()
@@ -77,7 +76,7 @@ public class ODFoods {
     public static final FoodProperties CABBAGE_WRAPPED_ELDER_GUARDIAN = new FoodProperties.Builder()
             .nutrition(15)
             .saturationMod(1F)
-            .effect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), BRIEF_DURATION, 0), 1.0F)
+            .effect( new MobEffectInstance(EffectsRegistry.COMFORT.get(), BRIEF_DURATION, 0), 1.0F)
             .build();
 
     public static final FoodProperties BRAISED_SEA_PICKLE = new FoodProperties.Builder()

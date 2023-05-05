@@ -2,19 +2,27 @@ package com.scouter.oceansdelight.blocks;
 
 import com.scouter.oceansdelight.OceansDelight;
 import com.scouter.oceansdelight.items.ODItems;
+import com.scouter.oceansdelight.setup.Registration;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.minecraft.core.Registry;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-@Mod.EventBusSubscriber(modid = OceansDelight.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
+import static com.scouter.oceansdelight.OceansDelight.prefix;
+
 public class ODBlocks {
-    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, OceansDelight.MODID);
-    public static final RegistryObject<Block> GUARDIAN_SOUP = BLOCKS.register("guardian_soup", () -> new GuardianSoupBlock(BlockBehaviour.Properties.of(Material.METAL)
-            .strength(0.5F, 6.0F).noOcclusion()
-            .sound(SoundType.LANTERN), ODItems.BOWL_OF_GUARDIAN_SOUP, true));
+    public static final Logger LOGGER = LoggerFactory.getLogger("oceansdelight");
+    public static final Block GUARDIAN_SOUP = registerBlock("guardian_soup", new GuardianSoupBlock(),  Registration.defaultBuilder);
+
+    private static Block registerBlock(String name, Block block, CreativeModeTab group){
+        return Registry.register(Registry.BLOCK, prefix(name), block);
+    }
+
+    public static void BLOCKS(){
+        LOGGER.info("Registering Blocks for " + OceansDelight.MODID);
+    }
 }

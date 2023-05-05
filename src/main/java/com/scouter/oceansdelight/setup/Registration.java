@@ -3,27 +3,28 @@ package com.scouter.oceansdelight.setup;
 import com.mojang.logging.LogUtils;
 import com.scouter.oceansdelight.blocks.ODBlocks;
 import com.scouter.oceansdelight.items.ODItems;
-import net.minecraft.world.item.Item;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
 import org.slf4j.Logger;
 
-import static com.scouter.oceansdelight.items.ODItems.creativeTab;
+import java.util.Optional;
+
+import static com.scouter.oceansdelight.OceansDelight.prefix;
 
 
 public class Registration {
     private static final Logger LOGGER = LogUtils.getLogger();
+    private static Optional<ItemStack> GUARDIAN_SOUP;
     public static void init(){
 
-        IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+        GUARDIAN_SOUP = Optional.ofNullable(new ItemStack(ODItems.GUARDIAN_SOUP));
+        ODItems.ITEMS();
+        ODBlocks.BLOCKS();
 
-        ODBlocks.BLOCKS.register(bus);
-        ODItems.ITEMS.register(bus);
 
 
     }
 
-    public static final Item.Properties defaultBuilder() {
-        return new Item.Properties().tab(creativeTab);
-    }
+    public static CreativeModeTab defaultBuilder = FabricItemGroupBuilder.build(prefix("oceansdelight"), () -> GUARDIAN_SOUP.get());
 }
