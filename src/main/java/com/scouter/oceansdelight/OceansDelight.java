@@ -4,8 +4,7 @@ import com.nhoryzon.mc.farmersdelight.FarmersDelightMod;
 import com.scouter.oceansdelight.setup.ClientSetup;
 import com.scouter.oceansdelight.setup.Registration;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
-import net.minecraft.advancements.critereon.LootTableTrigger;
+import net.fabricmc.fabric.api.loot.v1.event.LootTableLoadingCallback;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.level.storage.loot.LootPool;
@@ -41,10 +40,10 @@ public class OceansDelight implements ModInitializer {
                 EntityType.ELDER_GUARDIAN.getDefaultLootTable()
         );
 
-        LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
+        LootTableLoadingCallback.EVENT.register((resourceManager, lootManager, id, tableBuilder, source) -> {
             ResourceLocation injectId = new ResourceLocation(FarmersDelightMod.MOD_ID, "inject/" + id.getPath());
             if (scavengingEntityIdList.contains(id)) {
-                tableBuilder.pool(LootPool.lootPool().add(LootTableReference.lootTableReference(injectId)).build());
+                tableBuilder.withPool(LootPool.lootPool().add(LootTableReference.lootTableReference(injectId)).build());
             }
         });
     }
