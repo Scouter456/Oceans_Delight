@@ -1,0 +1,32 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "farmersdelight"
+      ]
+    }
+  ],
+
+        "type": "farmersdelight:cooking",
+        "container": {
+          "item": "minecraft:bowl"
+        },
+        "cookingtime": 200,
+        "experience": 0.35,
+        "ingredients": [
+          {
+            "item": "minecraft:sea_pickle"
+          },
+          {
+            "item": "minecraft:brown_mushroom"
+          },
+          {
+            "item": "minecraft:brown_mushroom"
+          }
+        ],
+        "result": {
+          "item": "oceansdelight:braised_sea_pickle"
+        }
+      }
+

@@ -1,0 +1,40 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "farmersdelight"
+      ]
+    }
+  ],
+
+        "type": "farmersdelight:cooking",
+        "container": {
+          "item": "minecraft:bowl"
+        },
+        "cookingtime": 200,
+        "experience": 0.35,
+        "ingredients": [
+          {
+            "item": "oceansdelight:guardian"
+          },
+          {
+            "tag": "c:crops/onion"
+          },
+          {
+            "tag": "c:eggs"
+          },
+          {
+            "tag": "c:eggs"
+          },
+          {
+            "tag": "c:crops/tomato"
+          },
+          {
+            "tag": "c:crops/tomato"
+          }
+        ],
+        "result": {
+          "item": "oceansdelight:guardian_soup"
+        }
+      }

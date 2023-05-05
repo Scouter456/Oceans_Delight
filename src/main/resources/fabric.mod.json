@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "oceansdelight",
+  "version": "${version}",
+
+  "name": "Ocean's Delight",
+  "description": "This is a mod that adds food based on the creatures in the ocean",
+  "authors": [
+    "Scouter"
+  ],
+  "contact": {
+    "homepage": "https://github.com/Scouter456/Oceans_Delight",
+    "sources": "https://github.com/Scouter456/Oceans_Delight"
+  },
+
+  "license": "MIT",
+  "icon": "assets/oceansdelight/oceans_delight_logo.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.scouter.oceansdelight.OceansDelight"
+    ],
+    "client": [
+      "com.scouter.oceansdelight.setup.ClientSetup"
+    ]
+  },
+  "mixins": [
+    "oceansdelight.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.9",
+    "fabric-api": "*",
+    "minecraft": "~1.19",
+    "java": ">=17",
+    "farmersdelight": ">=1.3.9-1.19"
+  }
+}

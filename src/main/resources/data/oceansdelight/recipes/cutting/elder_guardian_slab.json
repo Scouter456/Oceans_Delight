@@ -1,0 +1,30 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "farmersdelight"
+      ]
+    }
+  ],
+
+        "type": "farmersdelight:cutting",
+        "ingredients": [
+          {
+            "item": "oceansdelight:elder_guardian_slab"
+          }
+        ],
+        "result": [
+          {
+            "count": 9,
+            "item": "oceansdelight:elder_guardian_slice"
+          },
+          {
+            "item": "minecraft:bone_meal"
+          }
+        ],
+        "tool": {
+          "tag": "c:tools/knives"
+        }
+      }
+

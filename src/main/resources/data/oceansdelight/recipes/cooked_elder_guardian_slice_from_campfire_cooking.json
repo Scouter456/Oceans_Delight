@@ -1,0 +1,19 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "farmersdelight"
+      ]
+    }
+  ],
+
+        "type": "minecraft:campfire_cooking",
+        "cookingtime": 600,
+        "experience": 0.65,
+        "ingredient": {
+          "item": "oceansdelight:elder_guardian_slice"
+        },
+        "result": "oceansdelight:cooked_elder_guardian_slice"
+      }
+

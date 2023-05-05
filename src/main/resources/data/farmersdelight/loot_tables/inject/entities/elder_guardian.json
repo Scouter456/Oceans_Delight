@@ -1,0 +1,28 @@
+{
+  "pools": [
+    {
+      "name": "pool1",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "oceansdelight:elder_guardian_slab"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:entity_properties",
+          "predicate": {
+            "equipment": {
+              "mainhand": {
+                "tag": "c:tools/knives"
+              }
+            }
+          },
+          "entity": "killer"
+        }
+      ]
+    }
+  ]
+}
+

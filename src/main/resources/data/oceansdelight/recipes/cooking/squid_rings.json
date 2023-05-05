@@ -1,0 +1,28 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "farmersdelight"
+      ]
+    }
+  ],
+        "type": "farmersdelight:cooking",
+        "container": {
+          "item": "minecraft:bowl"
+        },
+        "cookingtime": 200,
+        "experience": 0.35,
+        "ingredients": [
+          {
+            "item": "oceansdelight:cut_tentacles"
+          },
+          {
+            "tag": "c:dough"
+          }
+        ],
+        "result": {
+          "item": "oceansdelight:squid_rings"
+        }
+      }
+
