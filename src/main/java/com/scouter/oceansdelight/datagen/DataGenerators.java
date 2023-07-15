@@ -1,4 +1,4 @@
-package com.scouter.oceansdelight.datagen;
+/*package com.scouter.oceansdelight.datagen;
 
 import com.google.common.collect.Sets;
 import net.minecraft.data.DataGenerator;
@@ -45,3 +45,4 @@ public class DataGenerators {
         generator.addProvider(true, new ItemModelGenerator(generator, helper));
     }
 }
+*/

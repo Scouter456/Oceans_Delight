@@ -1,4 +1,4 @@
-package com.scouter.oceansdelight.datagen;
+/*package com.scouter.oceansdelight.datagen;
 
 import com.mojang.logging.LogUtils;
 import com.scouter.oceansdelight.OceansDelight;
@@ -94,3 +94,4 @@ public class BlockstateGenerator extends BlockStateProvider {
         return "Block States: " + OceansDelight.MODID;
     }
 }
+*/

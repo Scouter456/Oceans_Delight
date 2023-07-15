@@ -1,4 +1,4 @@
-package com.scouter.oceansdelight.datagen;
+/*package com.scouter.oceansdelight.datagen;
 
 import com.mojang.logging.LogUtils;
 import com.scouter.oceansdelight.OceansDelight;
@@ -69,3 +69,4 @@ public class LanguageGenerator extends LanguageProvider {
         add("item.minecraft.lingering_potion.effect." + regName, "Lingering " + name);
     }
 }
+*/

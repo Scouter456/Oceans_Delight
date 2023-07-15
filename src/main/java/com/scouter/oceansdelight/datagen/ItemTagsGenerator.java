@@ -1,4 +1,4 @@
-package com.scouter.oceansdelight.datagen;
+/*package com.scouter.oceansdelight.datagen;
 
 import com.scouter.oceansdelight.OceansDelight;
 import net.minecraft.data.DataGenerator;
@@ -32,3 +32,4 @@ public class ItemTagsGenerator extends ItemTagsProvider {
     @Override
     public String getName() { return "Ocean's Delight Item Tags";}
 }
+*/

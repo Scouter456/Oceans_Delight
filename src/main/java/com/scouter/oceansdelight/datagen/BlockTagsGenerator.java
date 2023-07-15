@@ -1,4 +1,4 @@
-package com.scouter.oceansdelight.datagen;
+/*package com.scouter.oceansdelight.datagen;
 
 import com.scouter.oceansdelight.OceansDelight;
 import com.scouter.oceansdelight.blocks.ODBlocks;
@@ -23,3 +23,4 @@ public class BlockTagsGenerator extends BlockTagsProvider {
     @Override
     public String getName() { return "Ocean's Delight Tags";}
 }
+*/

@@ -1,4 +1,4 @@
-package com.scouter.oceansdelight.datagen;
+/*package com.scouter.oceansdelight.datagen;
 
 import com.scouter.oceansdelight.OceansDelight;
 import com.scouter.oceansdelight.items.ODItems;
@@ -63,4 +63,4 @@ public class ItemModelGenerator extends ItemModelProvider {
         }
         return builder;
     }
-}
+}*/
