@@ -1,0 +1,29 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "farmersdelight"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "cookingtime": 200,
+        "experience": 0.35,
+        "ingredients": [
+          {
+            "item": "minecraft:dried_kelp"
+          },
+          {
+            "item": "minecraft:honey_bottle"
+          }
+        ],
+        "result": {
+          "item": "oceansdelight:honey_fried_kelp"
+        }
+      }
+    }
+  ]
+}

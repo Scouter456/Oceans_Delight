@@ -41,7 +41,7 @@ public class ODItems {
 
 
     public static final RegistryObject<Item> BOWL_OF_GUARDIAN_SOUP = ITEMS.register("bowl_of_guardian_soup", () -> new Item(new Item.Properties().craftRemainder(Items.BOWL)
-            .food(ODFoods.BOWL_OF_GUARDIAN_SOUP)));
+            .food(ODFoods.BOWL_OF_GUARDIAN_SOUP).craftRemainder(Items.BOWL)));
 
     public static final RegistryObject<Item> ELDER_GUARDIAN_SLAB = ITEMS.register("elder_guardian_slab", () -> new Item(new Item.Properties()
             .food(ODFoods.ELDER_GUARDIAN_SLAB)));
@@ -67,7 +67,17 @@ public class ODItems {
     public static final RegistryObject<Item> BRAISED_SEA_PICKLE = ITEMS.register("braised_sea_pickle", () -> new Item(new Item.Properties()
             .food(ODFoods.BRAISED_SEA_PICKLE)));
 
+    public static final RegistryObject<Item> STUFFED_COD = ITEMS.register("stuffed_cod", () -> new Item(new Item.Properties()
+            .food(ODFoods.STUFFED_COD)));
 
+    public static final RegistryObject<Item> COOKED_STUFFED_COD = ITEMS.register("cooked_stuffed_cod", () -> new Item(new Item.Properties()
+            .food(ODFoods.COOKED_STUFFED_COD)));
+
+    public static final RegistryObject<Item> HONEY_FRIED_KELP = ITEMS.register("honey_fried_kelp", () -> new Item(new Item.Properties()
+            .food(ODFoods.HONEY_FRIED_KELP)));
+
+    public static final RegistryObject<Item> SEAGRASS_SALAD = ITEMS.register("seagrass_salad", () -> new Item(new Item.Properties()
+            .food(ODFoods.SEAGRASS_SALAD)));
 
     public static <B extends Block> RegistryObject<Item> fromBlock(RegistryObject<B> block) {
         return ITEMS.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

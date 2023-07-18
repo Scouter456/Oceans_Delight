@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:kelp"
+    },
+    {
+      "tag": "forge:crops/onion"
+    },
+    {
+      "tag": "forge:crops/tomato"
+    },
+    {
+      "item": "minecraft:brown_mushroom"
+    },
+    {
+      "item": "minecraft:cod"
+    },
+    {
+      "item": "farmersdelight:rope"
+    }
+  ],
+  "result": {
+    "item": "oceansdelight:stuffed_cod"
+  }
+}

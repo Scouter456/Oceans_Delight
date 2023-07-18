@@ -24,7 +24,7 @@ apply plugin: 'org.parchmentmc.librarian.forgegradle'
 apply plugin: 'org.spongepowered.mixin'
 
 
-version = '1.0.1-1.20'
+version = '1.0.2-1.20'
 group = 'com.scouter.oceansdelight' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'oceansdelight'
 

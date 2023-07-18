@@ -36,6 +36,10 @@ public class ODTabs {
                 entries.accept(ODItems.FUGU_SLICE.get());
                 entries.accept(ODItems.FUGU_ROLL.get());
                 entries.accept(ODItems.BRAISED_SEA_PICKLE.get());
+                entries.accept(ODItems.STUFFED_COD.get());
+                entries.accept(ODItems.COOKED_STUFFED_COD.get());
+                entries.accept(ODItems.HONEY_FRIED_KELP.get());
+                entries.accept(ODItems.SEAGRASS_SALAD.get());
             })
             .build();
 

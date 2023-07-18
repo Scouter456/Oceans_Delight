@@ -1,0 +1,22 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "farmersdelight"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:smelting",
+        "cookingtime": 200,
+        "experience": 0.35,
+        "ingredient": {
+          "item": "oceansdelight:stuffed_cod"
+        },
+        "result": "oceansdelight:cooked_stuffed_cod"
+      }
+    }
+  ]
+}
