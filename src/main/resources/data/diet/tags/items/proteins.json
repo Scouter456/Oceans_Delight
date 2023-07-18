@@ -1,0 +1,23 @@
+{
+  "replace": "false",
+  "values": [
+    "oceansdelight:fugu_roll",
+    "oceansdelight:fugu_slice",
+    "oceansdelight:stuffed_cod",
+    "oceansdelight:braised_sea_pickle",
+    "oceansdelight:cabbage_wrapped_elder_guardian",
+    "oceansdelight:cooked_stuffed_cod",
+    "oceansdelight:elder_guardian_roll",
+    "oceansdelight:cooked_elder_guardian_slice",
+    "oceansdelight:elder_guardian_slice",
+    "oceansdelight:elder_guardian_slab",
+    "oceansdelight:bowl_of_guardian_soup",
+    "oceansdelight:cooked_guardian_tail",
+    "oceansdelight:guardian_tail",
+    "oceansdelight:baked_tentacle_on_a_stick",
+    "oceansdelight:tentacle_on_a_stick",
+    "oceansdelight:squid_rings",
+    "oceansdelight:cut_tentacles",
+    "oceansdelight:tentacles"
+  ]
+}

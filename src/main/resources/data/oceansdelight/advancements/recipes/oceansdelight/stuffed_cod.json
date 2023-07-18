@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "cooked_guardian_tail": {
+    "has_cod": {
       "conditions": {
         "items": [
           {
             "items": [
-              "oceansdelight:guardian_tail"
+              "minecraft:cod"
             ]
           }
         ]
@@ -15,28 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "oceansdelight:cooked_guardian_tail"
+        "recipe": "oceansdelight:stuffed_cod"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "cooked_guardian_tail",
+      "has_cod",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "oceansdelight:cooked_guardian_tail"
+      "oceansdelight:stuffed_cod"
     ]
-  },
-  "fabric:load_conditions": [
-    {
-      "condition": "fabric:all_mods_loaded",
-      "values": [
-        "farmersdelight"
-      ]
-    }
-  ]
+  }
 }

@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "cooked_guardian_tail": {
+    "has_seagrass": {
       "conditions": {
         "items": [
           {
             "items": [
-              "oceansdelight:guardian_tail"
+              "minecraft:seagrass"
             ]
           }
         ]
@@ -15,28 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "oceansdelight:cooked_guardian_tail"
+        "recipe": "oceansdelight:seagrass_salad"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "cooked_guardian_tail",
+      "has_seagrass",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "oceansdelight:cooked_guardian_tail"
+      "oceansdelight:seagrass_salad"
     ]
-  },
-  "fabric:load_conditions": [
-    {
-      "condition": "fabric:all_mods_loaded",
-      "values": [
-        "farmersdelight"
-      ]
-    }
-  ]
+  }
 }

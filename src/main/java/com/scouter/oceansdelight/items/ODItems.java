@@ -72,8 +72,18 @@ public class ODItems {
 
     public static final Item BRAISED_SEA_PICKLE = registerItem("braised_sea_pickle",  new Item(new FabricItemSettings().group(Registration.defaultBuilder)
             .food(ODFoods.BRAISED_SEA_PICKLE)));
-    
 
+    public static final Item STUFFED_COD = registerItem("stuffed_cod", new Item(new FabricItemSettings().group(Registration.defaultBuilder)
+            .food(ODFoods.STUFFED_COD)));
+
+    public static final Item COOKED_STUFFED_COD = registerItem("cooked_stuffed_cod", new Item(new FabricItemSettings().group(Registration.defaultBuilder)
+            .food(ODFoods.COOKED_STUFFED_COD)));
+
+    public static final Item HONEY_FRIED_KELP = registerItem("honey_fried_kelp",  new Item(new FabricItemSettings().group(Registration.defaultBuilder)
+            .food(ODFoods.HONEY_FRIED_KELP)));
+
+    public static final Item SEAGRASS_SALAD = registerItem("seagrass_salad",  new Item(new FabricItemSettings().group(Registration.defaultBuilder)
+            .food(ODFoods.SEAGRASS_SALAD)));
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, prefix(name), item);
     }
