@@ -5,7 +5,6 @@ import com.scouter.oceansdelight.setup.ClientSetup;
 import com.scouter.oceansdelight.setup.Registration;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
-import net.minecraft.advancements.critereon.LootTableTrigger;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.level.storage.loot.LootPool;
@@ -16,11 +15,8 @@ import org.slf4j.LoggerFactory;
 import java.util.Locale;
 import java.util.Set;
 
-// The value here should match an entry in the META-INF/mods.toml file
-
 public class OceansDelight implements ModInitializer {
     public static final String MODID = "oceansdelight";
-    // Directly reference a slf4j logger
     public static final Logger LOGGER = LoggerFactory.getLogger("oceansdelight");
 
     @Override

@@ -4,25 +4,22 @@ import com.nhoryzon.mc.farmersdelight.block.FeastBlock;
 import com.scouter.oceansdelight.items.ODItems;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.core.BlockPos;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.material.Material;
 import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-import java.util.function.Supplier;
 import java.util.stream.Stream;
 
 public class GuardianSoupBlock extends FeastBlock {
 
     public GuardianSoupBlock() {
-        super(FabricBlockSettings.of(Material.METAL)
+        super(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)
                 .strength(0.5F, 6.0F).noOcclusion()
                 .sound(SoundType.LANTERN), ODItems.BOWL_OF_GUARDIAN_SOUP, true);
     }
