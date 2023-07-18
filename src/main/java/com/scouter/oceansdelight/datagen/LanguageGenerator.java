@@ -41,7 +41,10 @@ public class LanguageGenerator extends LanguageProvider {
         addItem(ODItems.BRAISED_SEA_PICKLE, "Braised Sea Pickle");
         addItem(ODItems.FUGU_ROLL, "Fugu Roll");
         addItem(ODItems.FUGU_SLICE, "Fugu Slice");
-
+        addItem(ODItems.STUFFED_COD, "Stuffed Cod");
+        addItem(ODItems.COOKED_STUFFED_COD, "Cooked Stuffed Cod");
+        addItem(ODItems.HONEY_FRIED_KELP, "Honey Fried Kelp");
+        addItem(ODItems.SEAGRASS_SALAD, "Seagrass Salad");
         //TABS
         addTabName(ODItems.creativeTab, "Ocean's Delight");
     }

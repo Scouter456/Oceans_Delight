@@ -39,6 +39,10 @@ public class ItemModelGenerator extends ItemModelProvider {
         singleTex(ODItems.FUGU_ROLL);
         singleTex(ODItems.CABBAGE_WRAPPED_ELDER_GUARDIAN);
         singleTex(ODItems.BRAISED_SEA_PICKLE);
+        singleTex(ODItems.STUFFED_COD);
+        singleTex(ODItems.COOKED_STUFFED_COD);
+        singleTex(ODItems.HONEY_FRIED_KELP);
+        singleTex(ODItems.SEAGRASS_SALAD);
     }
     private void toBlock(RegistryObject<Block> b) {
         toBlockModel(b, b.getId().getPath());

@@ -46,6 +46,23 @@ public class RecipeGenerator extends RecipeProvider implements IConditionBuilder
                 .requires(ODItems.COOKED_ELDER_GUARDIAN_SLICE.get())
                 .unlockedBy("has_cooked_elder_guardian_slice", has(ODItems.COOKED_ELDER_GUARDIAN_SLICE.get()))
                 .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(ODItems.STUFFED_COD.get(), 1)
+                .requires(Items.KELP)
+                .requires(ForgeTags.CROPS_ONION)
+                .requires(ForgeTags.CROPS_TOMATO)
+                .requires(Items.BROWN_MUSHROOM)
+                .requires(Items.COD)
+                .requires(ModItems.ROPE.get())
+                .unlockedBy("has_cod", has(Items.COD))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(ODItems.SEAGRASS_SALAD.get(), 1)
+                .requires(Items.SEAGRASS)
+                .requires(Items.BOWL)
+                .unlockedBy("has_seagrass", has(Items.SEAGRASS))
+                .save(consumer);
+
         farmersDelightRecipes(consumer);
         cookMeals(consumer);
         cuttingAnimalItems(consumer);
@@ -85,8 +102,12 @@ public class RecipeGenerator extends RecipeProvider implements IConditionBuilder
                         .addIngredient(ForgeTags.EGGS)
                         .addIngredient(ForgeTags.CROPS_TOMATO)
                         .addIngredient(ForgeTags.CROPS_TOMATO)
-
                 , "cooking/guardian_soup", consumer);
+
+        wrap(CookingPotRecipeBuilder.cookingPotRecipe(ODItems.HONEY_FRIED_KELP.get(), 1, NORMAL_COOKING, 0.35F)
+                        .addIngredient(Items.DRIED_KELP)
+                        .addIngredient(Items.HONEY_BOTTLE)
+                , "cooking/honey_fried_kelp", consumer);
     }
 
     private void cuttingAnimalItems(Consumer<FinishedRecipe> consumer) {
@@ -108,6 +129,7 @@ public class RecipeGenerator extends RecipeProvider implements IConditionBuilder
         foodSmeltingRecipes("cooked_guardian_tail", ODItems.GUARDIAN_TAIL.get(), ODItems.COOKED_GUARDIAN_TAIL.get(), 0.45F, consumer);
         foodSmeltingRecipes("cooked_elder_guardian_slice", ODItems.ELDER_GUARDIAN_SLICE.get(), ODItems.COOKED_ELDER_GUARDIAN_SLICE.get(), 0.65F, consumer);
         foodSmeltingRecipes("baked_tentacle_on_a_stick", ODItems.TENTACLE_ON_A_STICK.get(), ODItems.BAKED_TENTACLE_ON_A_STICK.get(), 0.35F, consumer);
+        foodSmeltingRecipes("cooked_stuffed_cod", ODItems.STUFFED_COD.get(), ODItems.COOKED_STUFFED_COD.get(), 0.35F, consumer);
 
     }
 

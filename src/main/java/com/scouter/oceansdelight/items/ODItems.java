@@ -4,10 +4,7 @@ package com.scouter.oceansdelight.items;
 import com.scouter.oceansdelight.OceansDelight;
 import com.scouter.oceansdelight.blocks.ODBlocks;
 import com.scouter.oceansdelight.setup.Registration;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -44,7 +41,7 @@ public class ODItems {
 
 
     public static final RegistryObject<Item> BOWL_OF_GUARDIAN_SOUP = ITEMS.register("bowl_of_guardian_soup", () -> new Item(Registration.defaultBuilder()
-            .food(ODFoods.BOWL_OF_GUARDIAN_SOUP)));
+            .food(ODFoods.BOWL_OF_GUARDIAN_SOUP).craftRemainder(Items.BOWL)));
 
     public static final RegistryObject<Item> ELDER_GUARDIAN_SLAB = ITEMS.register("elder_guardian_slab", () -> new Item(Registration.defaultBuilder()
             .food(ODFoods.ELDER_GUARDIAN_SLAB)));
@@ -70,6 +67,17 @@ public class ODItems {
     public static final RegistryObject<Item> BRAISED_SEA_PICKLE = ITEMS.register("braised_sea_pickle", () -> new Item(Registration.defaultBuilder()
             .food(ODFoods.BRAISED_SEA_PICKLE)));
 
+    public static final RegistryObject<Item> STUFFED_COD = ITEMS.register("stuffed_cod", () -> new Item(Registration.defaultBuilder()
+            .food(ODFoods.STUFFED_COD)));
+
+    public static final RegistryObject<Item> COOKED_STUFFED_COD = ITEMS.register("cooked_stuffed_cod", () -> new Item(Registration.defaultBuilder()
+            .food(ODFoods.COOKED_STUFFED_COD)));
+
+    public static final RegistryObject<Item> HONEY_FRIED_KELP = ITEMS.register("honey_fried_kelp", () -> new Item(Registration.defaultBuilder()
+            .food(ODFoods.HONEY_FRIED_KELP)));
+
+    public static final RegistryObject<Item> SEAGRASS_SALAD = ITEMS.register("seagrass_salad", () -> new Item(Registration.defaultBuilder()
+            .food(ODFoods.SEAGRASS_SALAD)));
     public static CreativeModeTab creativeTab = new CreativeModeTab("oceansdelight") {
         @Override
         public ItemStack makeIcon() {

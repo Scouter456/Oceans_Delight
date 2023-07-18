@@ -1,10 +1,11 @@
-// 1.19.2	2023-03-23T14:16:52.452965	Item Models: oceansdelight
+// 1.19.2	2023-07-18T21:21:24.3777369	Item Models: oceansdelight
 b7961cf72bc1b78c16a159756eb7d8e0c9670adf assets/oceansdelight/models/item/baked_tentacle_on_a_stick.json
 40e46ad2a293ee527baa9e171070ae0ab0cbee04 assets/oceansdelight/models/item/bowl_of_guardian_soup.json
 468e511fcaf488b5b6bd6a7a17956024e8d142ba assets/oceansdelight/models/item/braised_sea_pickle.json
 e3fce00eee687e0403a39b5b2335fd0b74bc8b4d assets/oceansdelight/models/item/cabbage_wrapped_elder_guardian.json
 1b7f4cab29fe137a1ba8868bf41c0fc057ff74b0 assets/oceansdelight/models/item/cooked_elder_guardian_slice.json
 f94e6b8f1f00128b414e3378a3f32c9ce410e0c4 assets/oceansdelight/models/item/cooked_guardian_tail.json
+88aeb910269ebcbe2435d51ece82ce4d64bd6b06 assets/oceansdelight/models/item/cooked_stuffed_cod.json
 7b7c8bdd042552b3caa644880ffbdddbdc02d52e assets/oceansdelight/models/item/cut_tentacles.json
 3d70520d46940a318349b6a006147838b6ec6c0b assets/oceansdelight/models/item/elder_guardian_roll.json
 14008c2aef6a506ea277d765a59c29e112723439 assets/oceansdelight/models/item/elder_guardian_slab.json
@@ -14,6 +15,9 @@ a5c4f17e048e1e29118c78260ce0fba7f5fd2cfa assets/oceansdelight/models/item/fugu_s
 75ffe957ecd87501acbb69363ea9fdcb524bd3a2 assets/oceansdelight/models/item/guardian.json
 41b2989ffbc0a7a9d1ea2ee7b8bdb5489ca59f6a assets/oceansdelight/models/item/guardian_soup.json
 f89767d77d13a0e59a5f2367cf23d378c3d2ffe8 assets/oceansdelight/models/item/guardian_tail.json
+1c08a208977af47691636fdb7ebee77f89f0995d assets/oceansdelight/models/item/honey_fried_kelp.json
+e5d627fe9fe8c64544d7da24116004b2c24e0f41 assets/oceansdelight/models/item/seagrass_salad.json
 33fbe77e4fe6c931cd135bd6fda863d65e714fcc assets/oceansdelight/models/item/squid_rings.json
+fcb9b540b79bae0e9132f063bb76877dc3e7b89c assets/oceansdelight/models/item/stuffed_cod.json
 b9e4aabafe7a8ea3771295bfb7433ec4bed89c1f assets/oceansdelight/models/item/tentacles.json
 8977a12b38887d3c6d85905961ea0c6a73382e6e assets/oceansdelight/models/item/tentacle_on_a_stick.json
