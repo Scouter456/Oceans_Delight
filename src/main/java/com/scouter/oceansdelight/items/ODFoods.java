@@ -14,7 +14,7 @@ public class ODFoods {
     public static final FoodProperties TENTACLES = new FoodProperties.Builder()
             .nutrition(3)
             .saturationModifier(0.3F)
-            .effect( new MobEffectInstance(MobEffects.BLINDNESS, BRIEF_DURATION, 0), 1.0F)
+            .effect(() -> new MobEffectInstance(MobEffects.BLINDNESS, BRIEF_DURATION, 0), 1.0F)
             .build();
 
     public static final FoodProperties CUT_TENTACLES = new FoodProperties.Builder()
@@ -40,15 +40,14 @@ public class ODFoods {
     public static final FoodProperties STUFFED_SQUID = new FoodProperties.Builder()
             .nutrition(5)
             .saturationModifier(0.2F)
-            .effect( new MobEffectInstance(MobEffects.BLINDNESS, BRIEF_DURATION, 0), 1.0F)
+            .effect(() -> new MobEffectInstance(MobEffects.BLINDNESS, BRIEF_DURATION, 0), 1.0F)
             .build();
 
     public static final FoodProperties COOKED_STUFFED_SQUID = new FoodProperties.Builder()
             .nutrition(8)
             .saturationModifier(0.3F)
-            .effect(new MobEffectInstance(ModEffects.COMFORT, SHORT_DURATION, 0), 1.0F)
+            .effect(() -> new MobEffectInstance(ModEffects.COMFORT, SHORT_DURATION, 0), 1.0F)
             .build();
-
 
     public static final FoodProperties GUARDIAN_TAIL = new FoodProperties.Builder()
             .nutrition(2)
@@ -63,7 +62,7 @@ public class ODFoods {
     public static final FoodProperties BOWL_OF_GUARDIAN_SOUP = new FoodProperties.Builder()
             .nutrition(15)
             .saturationModifier(0.8F)
-            .effect( new MobEffectInstance(ModEffects.COMFORT, MEDIUM_DURATION, 0), 1.0F)
+            .effect(() -> new MobEffectInstance(ModEffects.COMFORT, MEDIUM_DURATION, 0), 1.0F)
             .build();
     public static final FoodProperties ELDER_GUARDIAN_SLAB = new FoodProperties.Builder()
             .nutrition(9)
@@ -73,7 +72,7 @@ public class ODFoods {
     public static final FoodProperties ELDER_GUARDIAN_SLICE = new FoodProperties.Builder()
             .nutrition(1)
             .saturationModifier(0.1F)
-            .effect(new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 3000, 0), 0.5F)
+            .effect(() -> new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 3000, 0), 0.5F)
             .build();
 
     public static final FoodProperties COOKED_ELDER_GUARDIAN_SLICE = new FoodProperties.Builder()
@@ -89,12 +88,18 @@ public class ODFoods {
     public static final FoodProperties CABBAGE_WRAPPED_ELDER_GUARDIAN = new FoodProperties.Builder()
             .nutrition(15)
             .saturationModifier(1F)
-            .effect( new MobEffectInstance(ModEffects.COMFORT, BRIEF_DURATION, 0), 1.0F)
+            .effect(() -> new MobEffectInstance(ModEffects.COMFORT, BRIEF_DURATION, 0), 1.0F)
             .build();
 
     public static final FoodProperties BRAISED_SEA_PICKLE = new FoodProperties.Builder()
             .nutrition(8)
             .saturationModifier(0.5F)
+            .build();
+
+    public static final FoodProperties FUGU_SLICE = new FoodProperties.Builder()
+            .nutrition(1)
+            .saturationModifier(0.1F)
+            .fast()
             .build();
     public static final FoodProperties STUFFED_COD = new FoodProperties.Builder()
             .nutrition(3)
@@ -110,7 +115,7 @@ public class ODFoods {
     public static final FoodProperties COOKED_STUFFED_COD = new FoodProperties.Builder()
             .nutrition(6)
             .saturationModifier(0.8F)
-            .effect( new MobEffectInstance(ModEffects.COMFORT, BRIEF_DURATION, 0), 1.0F)
+            .effect(() -> new MobEffectInstance(ModEffects.COMFORT, BRIEF_DURATION, 0), 1.0F)
             .build();
 
     public static final FoodProperties HONEY_FRIED_KELP = new FoodProperties.Builder()
@@ -124,12 +129,6 @@ public class ODFoods {
             .nutrition(2)
             .saturationModifier(0.4F)
             .build();
-    public static final FoodProperties FUGU_SLICE = new FoodProperties.Builder()
-            .nutrition(1)
-            .saturationModifier(0.1F)
-            .fast()
-            .build();
-
     public static final FoodProperties FUGU_ROLL = new FoodProperties.Builder()
             .nutrition(7)
             .saturationModifier(0.6F)

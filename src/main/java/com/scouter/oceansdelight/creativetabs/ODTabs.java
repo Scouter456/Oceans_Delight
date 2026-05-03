@@ -2,60 +2,50 @@ package com.scouter.oceansdelight.creativetabs;
 
 import com.scouter.oceansdelight.OceansDelight;
 import com.scouter.oceansdelight.items.ODItems;
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
-import net.minecraft.core.Registry;
-import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
-
-import static com.scouter.oceansdelight.OceansDelight.LOGGER;
-import static com.scouter.oceansdelight.OceansDelight.prefix;
+import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.ItemStack;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class ODTabs {
+    public static final DeferredRegister<CreativeModeTab> TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, OceansDelight.MODID);
 
-
-    private static final CreativeModeTab FOODS = FabricItemGroup
-            .builder()
+    private static final CreativeModeTab FOODS = new CreativeModeTab.Builder(CreativeModeTab.Row.TOP, 9)
+            .withTabsBefore(CreativeModeTabs.SPAWN_EGGS)
             .title(Component.translatable("itemGroup.oceansdelight"))
-            .icon(ODItems.GUARDIAN_SOUP::getDefaultInstance)
+            .icon(() -> new ItemStack(ODItems.GUARDIAN_SOUP.get()))
             .displayItems((d, entries) -> {
-                entries.accept(ODItems.TENTACLES );
-                entries.accept(ODItems.CUT_TENTACLES );
-                entries.accept(ODItems.SQUID_RINGS  );
-                entries.accept(ODItems.TENTACLE_ON_A_STICK  );
-                entries.accept(ODItems.BAKED_TENTACLE_ON_A_STICK  );
-                entries.accept(ODItems.STUFFED_SQUID);
-                entries.accept(ODItems.COOKED_STUFFED_SQUID);
-                entries.accept(ODItems.GUARDIAN  );
-                entries.accept(ODItems.GUARDIAN_SOUP  );
-                entries.accept(ODItems.GUARDIAN_TAIL  );
-                entries.accept(ODItems.COOKED_GUARDIAN_TAIL  );
-                entries.accept(ODItems.BOWL_OF_GUARDIAN_SOUP  );
-                entries.accept(ODItems.ELDER_GUARDIAN_SLAB  );
-                entries.accept(ODItems.ELDER_GUARDIAN_SLICE  );
-                entries.accept(ODItems.COOKED_ELDER_GUARDIAN_SLICE  );
-                entries.accept(ODItems.ELDER_GUARDIAN_ROLL  );
-                entries.accept(ODItems.CABBAGE_WRAPPED_ELDER_GUARDIAN  );
-                entries.accept(ODItems.FUGU_SLICE  );
-                entries.accept(ODItems.FUGU_ROLL  );
-                entries.accept(ODItems.BRAISED_SEA_PICKLE  );
-                entries.accept(ODItems.STUFFED_COD  );
-                entries.accept(ODItems.COOKED_STUFFED_COD  );
-                entries.accept(ODItems.KELP_ENCRUSTED_COD );
-                entries.accept(ODItems.HONEY_FRIED_KELP  );
-                entries.accept(ODItems.SEAGRASS_SALAD  );
+                entries.accept(ODItems.TENTACLES.get());
+                entries.accept(ODItems.CUT_TENTACLES.get());
+                entries.accept(ODItems.SQUID_RINGS.get());
+                entries.accept(ODItems.TENTACLE_ON_A_STICK.get());
+                entries.accept(ODItems.BAKED_TENTACLE_ON_A_STICK.get());
+                entries.accept(ODItems.STUFFED_SQUID.get());
+                entries.accept(ODItems.COOKED_STUFFED_SQUID.get());
+                entries.accept(ODItems.GUARDIAN.get());
+                entries.accept(ODItems.GUARDIAN_SOUP.get());
+                entries.accept(ODItems.GUARDIAN_TAIL.get());
+                entries.accept(ODItems.COOKED_GUARDIAN_TAIL.get());
+                entries.accept(ODItems.BOWL_OF_GUARDIAN_SOUP.get());
+                entries.accept(ODItems.ELDER_GUARDIAN_SLAB.get());
+                entries.accept(ODItems.ELDER_GUARDIAN_SLICE.get());
+                entries.accept(ODItems.COOKED_ELDER_GUARDIAN_SLICE.get());
+                entries.accept(ODItems.ELDER_GUARDIAN_ROLL.get());
+                entries.accept(ODItems.CABBAGE_WRAPPED_ELDER_GUARDIAN.get());
+                entries.accept(ODItems.FUGU_SLICE.get());
+                entries.accept(ODItems.FUGU_ROLL.get());
+                entries.accept(ODItems.BRAISED_SEA_PICKLE.get());
+                entries.accept(ODItems.STUFFED_COD.get());
+                entries.accept(ODItems.COOKED_STUFFED_COD.get());
+                entries.accept(ODItems.KELP_ENCRUSTED_COD.get());
+                entries.accept(ODItems.HONEY_FRIED_KELP.get());
+                entries.accept(ODItems.SEAGRASS_SALAD.get());
             })
             .build();
 
 
-
-    public static final CreativeModeTab OD_TAB = creativeModeTab("oceansdelight", FOODS);
-    private static CreativeModeTab creativeModeTab(String name, CreativeModeTab item) {
-        return Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, prefix(name), item);
-    }
-
-
-    public static void TABS(){
-        LOGGER.info("Registering tabs for " + OceansDelight.MODID);
-    }
+    public static final DeferredHolder<CreativeModeTab, ?> OD_TAB = TABS.register("oceansdelight", () -> FOODS);
 }

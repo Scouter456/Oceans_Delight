@@ -1,23 +1,17 @@
 package com.scouter.oceansdelight.blocks;
 
 import com.scouter.oceansdelight.OceansDelight;
-import net.minecraft.core.Registry;
-import net.minecraft.core.registries.BuiltInRegistries;
+import com.scouter.oceansdelight.items.ODItems;
 import net.minecraft.world.level.block.Block;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import static com.scouter.oceansdelight.OceansDelight.prefix;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.neoforged.neoforge.registries.DeferredBlock;
+import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class ODBlocks {
-    public static final Logger LOGGER = LoggerFactory.getLogger("oceansdelight");
-    public static final Block GUARDIAN_SOUP = registerBlock("guardian_soup", new GuardianSoupBlock());
-
-    private static Block registerBlock(String name, Block block){
-        return Registry.register(BuiltInRegistries.BLOCK, prefix(name), block);
-    }
-
-    public static void BLOCKS(){
-        LOGGER.info("Registering Blocks for " + OceansDelight.MODID);
-    }
+    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(OceansDelight.MODID);
+    public static final DeferredBlock<Block> GUARDIAN_SOUP = BLOCKS.register("guardian_soup", () -> new GuardianSoupBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK)
+            .strength(0.5F, 6.0F).noOcclusion()
+            .sound(SoundType.LANTERN), ODItems.BOWL_OF_GUARDIAN_SOUP, true));
 }
