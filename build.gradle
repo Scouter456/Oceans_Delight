@@ -1,9 +1,12 @@
 plugins {
-	id 'fabric-loom' version '1.7-SNAPSHOT'
+	id 'fabric-loom' version '1.13-SNAPSHOT'
 	id 'maven-publish'
 }
 
-archivesBaseName = project.archives_base_name
+base {
+	archivesName = project.archives_base_name
+}
+
 version = project.mod_version
 group = project.maven_group
 
@@ -20,16 +23,19 @@ repositories {
 			includeGroup "curse.maven"
 		}
 	}
+	maven { url = "https://api.modrinth.com/maven" }
+
+	maven {
+		// CraftTweaker, JEI
+		name = "BlameJared"
+		url = "https://maven.blamejared.com/"
+	}
+
 
 	repositories {
 		maven {
 			name = "Greenhouse Maven"
-			url = 'https://repo.greenhouse.house/releases/'
-		}
-//  maven { url "https://mvn.devos.one/releases/" } // Porting Lib
-		maven {
-			name = "Greenhouse Maven (Snapshots)" // Temporary Porting Lib Fork for 1.21
-			url = 'https://repo.greenhouse.house/snapshots/'
+			url = 'https://maven.greenhouse.lgbt/releases/'
 		}
 		maven {
 			url "https://jitpack.io/" // Fabric ASM
@@ -38,14 +44,6 @@ repositories {
 			}
 		}
 	}
-	dependencies {
-		modImplementation("vectorwing:FarmersDelight:${fdrf_version}") {
-			exclude(group: "net.fabricmc")
-		}
-	}
-
-
-
 }
 
 loom {
@@ -57,7 +55,7 @@ dependencies {
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 	mappings loom.layered() {
 		officialMojangMappings()
-		parchment("org.parchmentmc.data:parchment-1.19.3:2023.03.12@zip")
+		parchment("org.parchmentmc.data:parchment-1.21.1:2024.11.17")
 	}
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
@@ -65,12 +63,13 @@ dependencies {
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 	//modImplementation "curse.maven:farmersdelight-482834:4640640"
-	modImplementation("vectorwing:FarmersDelight:${fdrf_version}") {
-		exclude(group: "net.fabricmc")
-	}
+	//modImplementation("vectorwing:FarmersDelight:${fdrf_version}") {
+	//	exclude(group: "net.fabricmc")
+	//}
+	modImplementation("maven.modrinth:farmers-delight-refabricated:$fdrf_version")
 
-	modCompileOnlyApi "curse.maven:jei-238222:5609861"
-	modRuntimeOnly "curse.maven:jei-238222:5609861"
+	modCompileOnly("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}")
+	modCompileOnly("mezz.jei:jei-${minecraft_version}-fabric-api:${jei_version}")
 }
 
 processResources {
@@ -95,7 +94,7 @@ java {
 
 jar {
 	from("LICENSE") {
-		rename { "${it}_${project.archivesBaseName}"}
+		rename { "${it}_${project.base.archivesName.get()}"}
 	}
 }
 

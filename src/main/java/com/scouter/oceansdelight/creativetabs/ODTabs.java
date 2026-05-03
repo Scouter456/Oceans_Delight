@@ -24,6 +24,8 @@ public class ODTabs {
                 entries.accept(ODItems.SQUID_RINGS  );
                 entries.accept(ODItems.TENTACLE_ON_A_STICK  );
                 entries.accept(ODItems.BAKED_TENTACLE_ON_A_STICK  );
+                entries.accept(ODItems.STUFFED_SQUID);
+                entries.accept(ODItems.COOKED_STUFFED_SQUID);
                 entries.accept(ODItems.GUARDIAN  );
                 entries.accept(ODItems.GUARDIAN_SOUP  );
                 entries.accept(ODItems.GUARDIAN_TAIL  );
@@ -39,6 +41,7 @@ public class ODTabs {
                 entries.accept(ODItems.BRAISED_SEA_PICKLE  );
                 entries.accept(ODItems.STUFFED_COD  );
                 entries.accept(ODItems.COOKED_STUFFED_COD  );
+                entries.accept(ODItems.KELP_ENCRUSTED_COD );
                 entries.accept(ODItems.HONEY_FRIED_KELP  );
                 entries.accept(ODItems.SEAGRASS_SALAD  );
             })

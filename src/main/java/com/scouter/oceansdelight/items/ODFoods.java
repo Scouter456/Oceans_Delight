@@ -37,6 +37,19 @@ public class ODFoods {
             .saturationModifier(0.6F)
             .build();
 
+    public static final FoodProperties STUFFED_SQUID = new FoodProperties.Builder()
+            .nutrition(5)
+            .saturationModifier(0.2F)
+            .effect( new MobEffectInstance(MobEffects.BLINDNESS, BRIEF_DURATION, 0), 1.0F)
+            .build();
+
+    public static final FoodProperties COOKED_STUFFED_SQUID = new FoodProperties.Builder()
+            .nutrition(8)
+            .saturationModifier(0.3F)
+            .effect(new MobEffectInstance(ModEffects.COMFORT, SHORT_DURATION, 0), 1.0F)
+            .build();
+
+
     public static final FoodProperties GUARDIAN_TAIL = new FoodProperties.Builder()
             .nutrition(2)
             .saturationModifier(0.2F)
@@ -88,9 +101,16 @@ public class ODFoods {
             .saturationModifier(0.2F)
             .build();
 
+    public static final FoodProperties KELP_CRUSTED_COD = new FoodProperties.Builder()
+            .nutrition(5)
+            .saturationModifier(0.6F)
+            //.effect(() -> new MobEffectInstance(MobEffects.WATER_BREATHING, BRIEF_DURATION, 0), 1.0F)
+            .build();
+
     public static final FoodProperties COOKED_STUFFED_COD = new FoodProperties.Builder()
             .nutrition(6)
             .saturationModifier(0.8F)
+            .effect( new MobEffectInstance(ModEffects.COMFORT, BRIEF_DURATION, 0), 1.0F)
             .build();
 
     public static final FoodProperties HONEY_FRIED_KELP = new FoodProperties.Builder()

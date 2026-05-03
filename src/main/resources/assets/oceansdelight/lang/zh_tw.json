@@ -17,5 +17,12 @@
   "item.oceansdelight.squid_rings": "魷魚圈",
   "item.oceansdelight.tentacle_on_a_stick": "觸手串",
   "item.oceansdelight.tentacles": "觸手",
-  "itemGroup.oceansdelight": "深海樂事"
+  "itemGroup.oceansdelight": "深海樂事",
+  "item.oceansdelight.cooked_stuffed_cod": "Cooked Stuffed Cod",
+  "item.oceansdelight.cooked_stuffed_squid": "Cooked Stuffed Squid",
+  "item.oceansdelight.honey_fried_kelp": "Honey Fried Kelp",
+  "item.oceansdelight.kelp_encrusted_cod": "Kelp Encrusted Cod",
+  "item.oceansdelight.seagrass_salad": "Seagrass Salad",
+  "item.oceansdelight.stuffed_cod": "Stuffed Cod",
+  "item.oceansdelight.stuffed_squid": "Stuffed Squid"
 }

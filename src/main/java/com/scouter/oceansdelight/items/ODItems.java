@@ -27,7 +27,7 @@ public class ODItems {
             .food(ODFoods.CUT_TENTACLES)));
 
     public static final Item SQUID_RINGS = registerItem("squid_rings",  new Item(new Item.Properties()
-            .food(ODFoods.SQUID_RINGS)));
+            .food(ODFoods.SQUID_RINGS).craftRemainder(Items.BOWL)));
 
     public static final Item TENTACLE_ON_A_STICK = registerItem("tentacle_on_a_stick",  new Item(new Item.Properties()
             .food(ODFoods.TENTACLE_ON_A_STICK)));
@@ -35,18 +35,21 @@ public class ODItems {
     public static final Item BAKED_TENTACLE_ON_A_STICK = registerItem("baked_tentacle_on_a_stick",  new Item(new Item.Properties()
             .food(ODFoods.BAKED_TENTACLE_ON_A_STICK)));
 
+    public static final Item STUFFED_SQUID = registerItem("stuffed_squid",  new Item(new Item.Properties()
+            .food(ODFoods.STUFFED_SQUID)));
+
+    public static final Item COOKED_STUFFED_SQUID = registerItem("cooked_stuffed_squid",  new Item(new Item.Properties()
+            .food(ODFoods.COOKED_STUFFED_SQUID)));
+
     public static final Item GUARDIAN = registerItem("guardian",  new Item(new Item.Properties()));
     public static final Item BOWL_OF_GUARDIAN_SOUP = registerItem("bowl_of_guardian_soup",  new Item(new Item.Properties().craftRemainder(Items.BOWL)
-            .food(ODFoods.BOWL_OF_GUARDIAN_SOUP)));
+            .food(ODFoods.BOWL_OF_GUARDIAN_SOUP).craftRemainder(Items.BOWL)));
     public static final Item GUARDIAN_SOUP = registerBlockItem(ODBlocks.GUARDIAN_SOUP);
     public static final Item GUARDIAN_TAIL = registerItem("guardian_tail",  new Item(new Item.Properties()
             .food(ODFoods.GUARDIAN_TAIL)));
 
     public static final Item COOKED_GUARDIAN_TAIL = registerItem("cooked_guardian_tail",  new Item(new Item.Properties()
             .food(ODFoods.COOKED_GUARDIAN_TAIL)));
-
-
-
 
     public static final Item ELDER_GUARDIAN_SLAB = registerItem("elder_guardian_slab",  new Item(new Item.Properties()
             .food(ODFoods.ELDER_GUARDIAN_SLAB)));
@@ -70,10 +73,13 @@ public class ODItems {
             .food(ODFoods.FUGU_ROLL)));
 
     public static final Item BRAISED_SEA_PICKLE = registerItem("braised_sea_pickle",  new Item(new Item.Properties()
-            .food(ODFoods.BRAISED_SEA_PICKLE)));
+            .food(ODFoods.BRAISED_SEA_PICKLE).craftRemainder(Items.BOWL)));
 
     public static final Item STUFFED_COD = registerItem("stuffed_cod", new Item(new Item.Properties()
             .food(ODFoods.STUFFED_COD)));
+
+    public static final Item KELP_ENCRUSTED_COD = registerItem("kelp_encrusted_cod", new Item(new Item.Properties()
+            .food(ODFoods.KELP_CRUSTED_COD)));
 
     public static final Item COOKED_STUFFED_COD = registerItem("cooked_stuffed_cod", new Item(new Item.Properties()
             .food(ODFoods.COOKED_STUFFED_COD)));
@@ -82,7 +88,8 @@ public class ODItems {
             .food(ODFoods.HONEY_FRIED_KELP)));
 
     public static final Item SEAGRASS_SALAD = registerItem("seagrass_salad",  new Item(new Item.Properties()
-            .food(ODFoods.SEAGRASS_SALAD)));
+            .food(ODFoods.SEAGRASS_SALAD).craftRemainder(Items.BOWL)));
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(BuiltInRegistries.ITEM, prefix(name), item);
     }

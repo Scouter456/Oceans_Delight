@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "cooked_stuffed_squid": {
+      "conditions": {
+        "items": [
+          {
+            "items": "oceansdelight:stuffed_squid"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "oceansdelight:cooked_stuffed_squid_from_campfire_cooking"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "cooked_stuffed_squid"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "oceansdelight:cooked_stuffed_squid_from_campfire_cooking"
+    ]
+  }
+}
